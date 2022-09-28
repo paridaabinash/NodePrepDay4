@@ -1,7 +1,7 @@
-let userData = {
-  name: "naveen",
-  phone: "7595932156",
-  email: "naveen@gmail.com",
-  password: "naveen@123",
+let userData = (name,phone,email,password)=>{
+  this.name=name,
+  this.phone=phone,
+  this.email=email,
+  this.password=password
 }
 module.exports = userData;
