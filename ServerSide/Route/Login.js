@@ -4,10 +4,10 @@ const jwtToken = require("jsonwebtoken");
 
 let userData = [
   {
-    name: "naveen",
-    phone: "7595932156",
-    email: "naveen@gmail.com",
-    password: "naveen@123",
+    name: "abinash",
+    phone: "123456789",
+    email: "aaa@gmail.com",
+    password: "aaa@123",
   },
 ];
 router.get("/login", (req, res) => {

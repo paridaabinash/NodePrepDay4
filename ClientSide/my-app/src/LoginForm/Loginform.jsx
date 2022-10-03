@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import axios from 'axios'
+import axios from 'axios';
+
 function Loginform() {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleChange1 = (e) => {
@@ -17,15 +19,16 @@ function Loginform() {
       'email':email,
       'password':password
     }
-   axios.post('http://localhost:4004/login',data).then((response)=>{
-    response.data.log?console.log('logged-in'):console.log('wrong-credentials')
-   }).catch((err)=>{
-    console.log(err)
-   })
+
+    axios.post('http://localhost:4004/login',data).then((response)=>{
+      response.data.log?console.log('logged-in'):console.log('wrong-credentials')
+    }).catch((err)=>{
+      console.log(err)
+    })
     console.log(email, password);
   };
   return (
-    <div className="loginform w-50 m-auto border border-primary p-4 bg-info">
+    <div className="loginform w-50 m-auto border border-warning p-4 bg-secondary">
       <Form onSubmit={handlesubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -46,7 +49,7 @@ function Loginform() {
             name="password"
           />
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={handlesubmit}>
+        <Button variant="warning" type="submit" onClick={handlesubmit}>
           Login
         </Button>
       </Form>

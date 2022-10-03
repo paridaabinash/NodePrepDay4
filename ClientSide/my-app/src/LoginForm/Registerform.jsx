@@ -5,11 +5,11 @@ import Form from 'react-bootstrap/Form';
 export default function Registerform() {
     const [data,setData]=useState()
     const handleSubmit=(e)=>{
-        setData(e.target.value)
+        setData(e.target.value);
     }
   return (
     <>
-      <div className="loginform w-50 m-auto border border-primary p-4 bg-info">
+      <div className="loginform w-50 m-auto border border-warning p-4 bg-secondary">
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail" value='name'>
             <Form.Label>Name</Form.Label>
@@ -27,7 +27,7 @@ export default function Registerform() {
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button variant="warning" type="submit">
             Register
           </Button>
         </Form>

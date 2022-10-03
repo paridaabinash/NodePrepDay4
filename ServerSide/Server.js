@@ -4,8 +4,8 @@ const port = 4004 || process.env.PORT;
 const bodyparser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
-let LoginRoute=require('./Route/Login')
-let Registerroute=require('./Route/Register')
+let LoginRoute= require('./Route/Login');
+let Registerroute= require('./Route/Register');
 // Set up Global configuration access
 dotenv.config();
 
